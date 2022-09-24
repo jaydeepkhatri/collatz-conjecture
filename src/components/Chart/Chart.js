@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Linechart }  from "../index";
+import { Linechart, Info }  from "../index";
 
 const Chart = () => {
 
-    // const [numbers, setNumbers] = useState([]);
+    const [hailNumbers, setHailStoneNumbers] = useState([]);
     const [searchNumber, setSearchNumber] = useState(69);
     const [chartData, setChartData] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +26,7 @@ const Chart = () => {
         console.log(num)
         hailStoneNumbers.push(num);
         if (num <= 1) {
-            // setNumbers(hailStoneNumbers);
+            setHailStoneNumbers(hailStoneNumbers);
             setChartData({
                 labels: hailStoneNumbers.map((number, i) => i),
                 datasets: [{
@@ -43,10 +43,6 @@ const Chart = () => {
 
     useEffect(() => {
         collatz(searchNumber);
-
-        return (() => {
-            console.log("hehe")
-        })
     }, [searchNumber])
     
 
@@ -66,6 +62,7 @@ const Chart = () => {
 
             {isLoading ? null :<section className="py-8 flex flex-col items-center justify-center">
                 <Linechart chartData={chartData} />
+                <Info hailStoneNumbers={hailNumbers} />
             </section> }
             
             
