@@ -1,4 +1,4 @@
-import {Header, Chart} from "./components";
+import { Header, Chart, Footer } from "./components";
 import "./index.css";
 
 
@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <Chart />
+      <Footer />
     </div>
   );
 }
