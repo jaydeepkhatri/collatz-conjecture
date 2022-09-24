@@ -4,9 +4,9 @@ import Chart from 'chart.js/auto';
 const Linechart = ({chartData}) => {
     return (
         <>
-            <p>dfafdsf</p>
-            {console.log(chartData)}
-            <Line data={chartData} />
+            <div className="md:mx-auto w-full max-w-6xl">
+                <Line data={chartData} />
+            </div>
         </>
         
     )

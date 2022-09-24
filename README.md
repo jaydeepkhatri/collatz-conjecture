@@ -1,6 +1,9 @@
 # Collatz Conjecture
 
-[ ] - Error Generating Chart
+[ ] - Chart 
+
 [ ] - Create Chart Hook
+
 [ ] - Timer
-[ ] - Animation
+
+//923211111
