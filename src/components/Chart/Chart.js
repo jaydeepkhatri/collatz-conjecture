@@ -28,7 +28,7 @@ const Chart = () => {
         if (num <= 1) {
             setHailStoneNumbers(hailStoneNumbers);
             setChartData({
-                labels: hailStoneNumbers.map((number, i) => i),
+                labels: hailStoneNumbers.map((number, i) => i+1),
                 datasets: [{
                     label: "Hailstone Number",
                     data: hailStoneNumbers,
@@ -50,12 +50,11 @@ const Chart = () => {
     return (
         <>
             <section className="py-12 flex justify-center">
-                <div className="md:container md:mx-auto flex flex-col items-center justify-center">
-                    <label htmlFor="number" className="mb-3">Enter Number</label>
+                <div className="md:container md:mx-auto flex flex-row items-center justify-center">
                     <input type="number" id="number" className="form-control rounded px-4 py-2 
                     text-gray-700 bg-white bg-clip-padding border-2
                     focus:border-gray-500 focus:outline-none" onChange={(e) => setSearchNumber(e.target.value)} value={searchNumber} placeholder="Enter a Number" />
-                    {/* <button type="button" className="inline-block rounded border-2 text-white bg-blue-600 border-blue-600 px-4 py-2 ml-2">Generate Chart!</button> */}
+                    <button type="button" onClick={(e) => setSearchNumber(Math.floor(Math.random() * Number.MAX_SAFE_INTEGER))} className="inline-block rounded border-2 text-white bg-blue-600 border-blue-600 hover:bg-blue-800 hover:border-blue-800 duration-100 px-4 py-2 ml-2">Generate Random!</button>
                 </div>
             </section>
 
