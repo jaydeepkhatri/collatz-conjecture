@@ -23,7 +23,7 @@ const Chart = () => {
     let hailStoneNumbers = [];
 
     function collatz(num) {
-        console.log(num)
+        //console.log(num)
         hailStoneNumbers.push(num);
         if (num <= 1) {
             setHailStoneNumbers(hailStoneNumbers);
