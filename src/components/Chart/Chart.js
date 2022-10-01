@@ -50,11 +50,11 @@ const Chart = () => {
     return (
         <>
             <section className="py-12 flex justify-center">
-                <div className="md:container md:mx-auto flex flex-row items-center justify-center">
+                <div className="md:container md:mx-auto md:flex-row flex flex-col items-center justify-center">
                     <input type="number" id="number" className="form-control rounded px-4 py-2 
                     text-gray-700 bg-white bg-clip-padding border-2
                     focus:border-gray-500 focus:outline-none" onChange={(e) => setSearchNumber(e.target.value)} value={searchNumber} placeholder="Enter a Number" />
-                    <button type="button" onClick={(e) => setSearchNumber(Math.floor(Math.random() * Number.MAX_SAFE_INTEGER))} className="inline-block rounded border-2 text-white bg-blue-600 border-blue-600 hover:bg-blue-800 hover:border-blue-800 duration-100 px-4 py-2 ml-2">Generate Random!</button>
+                    <button type="button" title="Click to generate Random Number" onClick={(e) => setSearchNumber(Math.floor(Math.random() * Number.MAX_SAFE_INTEGER))} className="inline-block rounded border-2 text-white bg-blue-600 border-blue-600 hover:bg-blue-800 hover:border-blue-800 duration-100 px-4 py-2 mt-2 md:mt-0 md:ml-2">Generate Random!</button>
                 </div>
             </section>
 
