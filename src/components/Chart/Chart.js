@@ -10,7 +10,7 @@ const Chart = () => {
 
     
     function checknumber (num) {
-        if(num%2 == 1) {
+        if(num%2 === 1) {
             num = num * 3;
             num++;
             return collatz(num);

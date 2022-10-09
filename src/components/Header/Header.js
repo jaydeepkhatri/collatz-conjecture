@@ -17,7 +17,7 @@ const Header = () => {
 const NavLink = ({name, link}) => {
     return (
         <li className="nav-item">
-            <a className="nav-link inline-block px-4 py-1 mx-2 hover:text-blue-400 duration-100" title={name} target="_blank" href={link}>{name}</a>
+            <a className="nav-link inline-block px-4 py-1 mx-2 hover:text-blue-400 duration-100" title={name} target="_blank" rel="noreferrer" href={link}>{name}</a>
         </li>
     )
 }
